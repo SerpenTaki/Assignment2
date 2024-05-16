@@ -26,4 +26,13 @@ public class IntegerToRomanTest {
         assertEquals(IntegerToRoman.convert(2), "II");
         assertEquals(IntegerToRoman.convert(3), "III");
     }
+
+    //primi 6 numeri continuo
+    @Test
+    public void First6NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(4), "IV");
+        assertEquals(IntegerToRoman.convert(5), "V");
+        assertEquals(IntegerToRoman.convert(6), "VI");
+    }
 }
+

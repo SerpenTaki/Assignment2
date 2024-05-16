@@ -28,4 +28,18 @@ public class RomanPrinterTest {
         String stringa= result.toString(); 
             assertEquals(RomanPrinter.printAsciiArt("I"), stringa);
     }
+
+    @Test
+    public void TestV() {
+        StringBuilder result = new StringBuilder();
+            result.append("*        *\n");
+            result.append(" *      * \n");
+            result.append("  *    *  \n");
+            result.append("   *  *   \n");
+            result.append("     *    \n");
+            result.append(" \n");
+        String stringa= result.toString(); 
+            assertEquals(RomanPrinter.printAsciiArt("V"), stringa);
+    }
 }
+

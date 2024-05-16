@@ -8,7 +8,7 @@ public class RomanPrinter {
     public static String print(int num){
       return printAsciiArt(IntegerToRoman.convert(num));
     }
-
+    
     public static String printAsciiArt(String romanNumber){
       StringBuilder result = new StringBuilder();
       int length = romanNumber.length();
@@ -23,6 +23,14 @@ public class RomanPrinter {
               result.append("***\n");
               result.append("\n");
             break;
+          case 'V':
+            result.append("*        *\n");
+            result.append(" *      * \n");
+            result.append("  *    *  \n");
+            result.append("   *  *   \n");
+            result.append("     *    \n");
+            result.append(" \n");
+          break;
           default:
             throw new IllegalArgumentException("Invalid Roman numeral: " + c);
         }
@@ -30,3 +38,4 @@ public class RomanPrinter {
       return result.toString();
     }
 }
+
