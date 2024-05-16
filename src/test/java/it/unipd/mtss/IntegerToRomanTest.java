@@ -34,5 +34,18 @@ public class IntegerToRomanTest {
         assertEquals(IntegerToRoman.convert(5), "V");
         assertEquals(IntegerToRoman.convert(6), "VI");
     }
-}
 
+    //primi 9 numeri continuo    
+    @Test
+    public void First9NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(7), "VII");
+        assertEquals(IntegerToRoman.convert(8), "VIII");
+        assertEquals(IntegerToRoman.convert(9), "IX");
+    }
+
+    //numeri con una sola lettera fino a 10
+    @Test
+    public void OneLetterNumbers() {
+        assertEquals(IntegerToRoman.convert(10), "X");
+    }
+}
