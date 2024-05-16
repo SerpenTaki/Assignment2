@@ -67,4 +67,17 @@ public class RomanPrinterTest {
         String stringa= result.toString(); 
             assertEquals(RomanPrinter.printAsciiArt("L"), stringa);
     }
+
+    @Test
+        public void TestC() {
+            StringBuilder result = new StringBuilder();
+                result.append("* * * *\n");
+                result.append("*      \n");
+                result.append("*      \n");
+                result.append("*      \n");
+                result.append("* * * *\n");
+                result.append(" \n");
+            String stringa= result.toString(); 
+                assertEquals(RomanPrinter.printAsciiArt("C"), stringa);
+        }
 }
