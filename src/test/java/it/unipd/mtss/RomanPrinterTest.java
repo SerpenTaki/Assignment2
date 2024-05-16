@@ -80,4 +80,17 @@ public class RomanPrinterTest {
             String stringa= result.toString(); 
                 assertEquals(RomanPrinter.printAsciiArt("C"), stringa);
         }
+
+        @Test
+        public void TestD() {
+            StringBuilder result = new StringBuilder();
+                result.append("* * *   \n");
+                result.append("*     * \n");
+                result.append("*      *\n");
+                result.append("*     * \n");
+                result.append("* * *   \n");
+                result.append(" \n");
+            String stringa= result.toString(); 
+                assertEquals(RomanPrinter.printAsciiArt("D"), stringa);
+        }
 }
