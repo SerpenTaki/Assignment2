@@ -93,4 +93,72 @@ public class RomanPrinterTest {
             String stringa= result.toString(); 
                 assertEquals(RomanPrinter.printAsciiArt("D"), stringa);
         }
+
+        @Test
+        public void TestM() {
+            StringBuilder result = new StringBuilder();
+                result.append("*       *\n");
+                result.append("* *   * *\n");
+                result.append("*  * *  *\n");
+                result.append("*   *   *\n");
+                result.append("*       *\n");
+                result.append(" \n");
+            String stringa= result.toString(); 
+                assertEquals(RomanPrinter.printAsciiArt("M"), stringa);
+        }
+
+        @Test
+        public void TestMultiChars() {
+            StringBuilder result = new StringBuilder();
+                result.append("*       *\n");
+                result.append("* *   * *\n");
+                result.append("*  * *  *\n");
+                result.append("*   *   *\n");
+                result.append("*       *\n");
+                result.append(" \n");
+                result.append("* * *   \n");
+                result.append("*     * \n");
+                result.append("*      *\n");
+                result.append("*     * \n");
+                result.append("* * *   \n");
+                result.append(" \n");
+                result.append("* * * *\n");
+                result.append("*      \n");
+                result.append("*      \n");
+                result.append("*      \n");
+                result.append("* * * *\n");
+                result.append(" \n");
+                result.append("*       \n");
+                result.append("*       \n");
+                result.append("*       \n");
+                result.append("*       \n");
+                result.append("* * * * \n");
+                result.append(" \n");
+                result.append("*    * \n");
+                result.append(" *  * \n");
+                result.append("  *   \n");
+                result.append(" *  * \n");
+                result.append("*    *\n");
+                result.append(" \n");
+                result.append("*        *\n");
+                result.append(" *      * \n");
+                result.append("  *    *  \n");
+                result.append("   *  *   \n");
+                result.append("     *    \n");
+                result.append(" \n");
+                result.append("***\n");
+                result.append(" * \n");
+                result.append(" * \n");
+                result.append(" * \n");
+                result.append("***\n");
+                result.append("\n");
+
+            String stringa= result.toString(); 
+                assertEquals(RomanPrinter.printAsciiArt("MDCLXVI"), stringa);
+        }
+
+        @Test(timeout = 100) 
+        public void performance() {
+          RomanPrinter.printAsciiArt("MDCLXVI");
+        }
 }

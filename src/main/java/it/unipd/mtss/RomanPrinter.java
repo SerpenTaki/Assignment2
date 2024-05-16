@@ -51,7 +51,7 @@ public class RomanPrinter {
             result.append("* * * * \n");
             result.append(" \n");
           break;
-
+            
           case 'C':
           result.append("* * * *\n");
           result.append("*      \n");
@@ -69,6 +69,15 @@ public class RomanPrinter {
           result.append("* * *   \n");
           result.append(" \n");
           break;
+          
+        case 'M':
+          result.append("*       *\n");
+          result.append("* *   * *\n");
+          result.append("*  * *  *\n");
+          result.append("*   *   *\n");
+          result.append("*       *\n");
+          result.append(" \n");
+          break;
 
           default:
             throw new IllegalArgumentException("Invalid Roman numeral: " + c);
@@ -77,3 +86,4 @@ public class RomanPrinter {
       return result.toString();
     }
 }
+
