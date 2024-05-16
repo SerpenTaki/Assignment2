@@ -55,3 +55,4 @@ public class RomanPrinterTest {
             assertEquals(RomanPrinter.printAsciiArt("X"), stringa);
     }
 }
+
