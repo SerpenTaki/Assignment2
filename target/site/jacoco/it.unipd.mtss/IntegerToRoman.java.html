@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IntegerToRoman.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">roman-number</a> &gt; <a href="index.source.html" class="el_package">it.unipd.mtss</a> &gt; <span class="el_source">IntegerToRoman.java</span></div><h1>IntegerToRoman.java</h1><pre class="source lang-java linenums">////////////////////////////////////////////////////////////////////
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IntegerToRoman.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">roman-number</a> &gt; <a href="index.source.html" class="el_package">it.unipd.mtss</a> &gt; <span class="el_source">IntegerToRoman.java</span></div><h1>IntegerToRoman.java</h1><pre class="source lang-java linenums">////////////////////////////////////////////////////////////////////
 // Gabriele Di Pietro 2010000
 // Elio Greggio 2012831
 ////////////////////////////////////////////////////////////////////
@@ -10,29 +10,30 @@ import java.util.TreeMap;
   // Map che associa i numeri arabi ai corrispondenti numeri romani
 <span class="fc" id="L11">  private static final TreeMap&lt;Integer, String&gt; ROMAN_NUMERALS_MAP = new TreeMap&lt;&gt;();</span>
   static {
-
-<span class="fc" id="L14">    ROMAN_NUMERALS_MAP.put(10, &quot;X&quot;);</span>
-<span class="fc" id="L15">    ROMAN_NUMERALS_MAP.put(9, &quot;IX&quot;);</span>
-<span class="fc" id="L16">    ROMAN_NUMERALS_MAP.put(5, &quot;V&quot;);</span>
-<span class="fc" id="L17">    ROMAN_NUMERALS_MAP.put(4, &quot;IV&quot;);</span>
-<span class="fc" id="L18">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
-<span class="fc" id="L19">  }</span>
+<span class="fc" id="L13">    ROMAN_NUMERALS_MAP.put(50, &quot;L&quot;);</span>
+<span class="fc" id="L14">    ROMAN_NUMERALS_MAP.put(40, &quot;XL&quot;);</span>
+<span class="fc" id="L15">    ROMAN_NUMERALS_MAP.put(10, &quot;X&quot;);</span>
+<span class="fc" id="L16">    ROMAN_NUMERALS_MAP.put(9, &quot;IX&quot;);</span>
+<span class="fc" id="L17">    ROMAN_NUMERALS_MAP.put(5, &quot;V&quot;);</span>
+<span class="fc" id="L18">    ROMAN_NUMERALS_MAP.put(4, &quot;IV&quot;);</span>
+<span class="fc" id="L19">    ROMAN_NUMERALS_MAP.put(1, &quot;I&quot;);</span>
+<span class="fc" id="L20">  }</span>
   
   public static String convert(int number){
 
-<span class="fc bfc" id="L23" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 20) {</span>
-<span class="fc" id="L24">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 20.&quot;);</span>
+<span class="fc bfc" id="L24" title="All 4 branches covered.">    if (number &lt; 1 || number &gt; 50) {</span>
+<span class="fc" id="L25">      throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 50.&quot;);</span>
     }
     
-<span class="fc" id="L27">    StringBuilder romanNumber = new StringBuilder();</span>
+<span class="fc" id="L28">    StringBuilder romanNumber = new StringBuilder();</span>
     int floorEntry;
-<span class="fc bfc" id="L29" title="All 2 branches covered.">    while (number &gt; 0) {</span>
-<span class="fc" id="L30">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
-<span class="fc" id="L31">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
-<span class="fc" id="L32">      number -= floorEntry;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">    while (number &gt; 0) {</span>
+<span class="fc" id="L31">      floorEntry = ROMAN_NUMERALS_MAP.floorKey(number);</span>
+<span class="fc" id="L32">      romanNumber.append(ROMAN_NUMERALS_MAP.get(floorEntry));</span>
+<span class="fc" id="L33">      number -= floorEntry;</span>
     }
     
-<span class="fc" id="L35">    return romanNumber.toString();</span>
+<span class="fc" id="L36">    return romanNumber.toString();</span>
   }
 }
 

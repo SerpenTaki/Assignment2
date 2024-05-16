@@ -43,6 +43,7 @@ public class IntegerToRomanTest {
         assertEquals(IntegerToRoman.convert(9), "IX");
     }
 
+    //Tests fino a 20
     @Test
     public void First20NumbersConversion() {
         assertEquals(IntegerToRoman.convert(12), "XII");
@@ -50,10 +51,18 @@ public class IntegerToRomanTest {
         assertEquals(IntegerToRoman.convert(20), "XX");
     }
 
+    //Tests fino a 50
+    @Test
+    public void First50NumbersConversion() {
+        assertEquals(IntegerToRoman.convert(25), "XXV");
+        assertEquals(IntegerToRoman.convert(30), "XXX");
+        assertEquals(IntegerToRoman.convert(43), "XLIII");
+    }
+
     //numeri con una sola lettera fino a 10
     @Test
     public void OneLetterNumbers() {
         assertEquals(IntegerToRoman.convert(10), "X");
+        assertEquals(IntegerToRoman.convert(50), "L");
     }
 }
-
