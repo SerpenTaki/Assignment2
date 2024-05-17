@@ -24,3 +24,13 @@ jobs:
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+    - name: Upload Checkstyle Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: checkstyle-report
+        path: target/site/checkstyle.html
+    - name: Upload JaCoCo Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: jacoco-report
+        path: target/site/jacoco/index.html
